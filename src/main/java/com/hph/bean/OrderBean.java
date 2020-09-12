@@ -1,7 +1,7 @@
 package com.hph.bean;
 
 
-import java.beans.Transient;
+import java.io.Serializable;
 
 /**
  * @Classname OrderBean
@@ -10,7 +10,7 @@ import java.beans.Transient;
  * @Created by hph
  */
 
-public class OrderBean {
+public class OrderBean implements Serializable {
     private int provinceCode;
     private int cityCode;
     private String userId;

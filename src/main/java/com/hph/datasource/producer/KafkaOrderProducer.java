@@ -38,7 +38,9 @@ public class KafkaOrderProducer {
 
         Producer<String, String> producer = new KafkaProducer<>(props);
         int i = 0;
-        while (true) {
+
+        boolean flag = true;
+        while (flag) {
             OrderBean orderBean = new OrderBean();
             if (i % 2 == 0) {
                 orderBean.setProvinceCode(37000);
@@ -54,7 +56,11 @@ public class KafkaOrderProducer {
             producer.send(new ProducerRecord<String, String>("Order_Reduce", orderBeanJson));
             System.out.println(orderBeanJson);
             i++;
-            Thread.sleep(10000);
+            if (i == 7500) {
+                flag = false;
+            }
+
+
         }
     }
 }
