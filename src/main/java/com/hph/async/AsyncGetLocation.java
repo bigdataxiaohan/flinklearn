@@ -58,7 +58,7 @@ public class AsyncGetLocation extends RichAsyncFunction<String, UserLocation> {
                     HttpResponse response = future.get();
                     if (response.getStatusLine().getStatusCode() == 200) {
                         String result = EntityUtils.toString(response.getEntity());
-
+                        //这里引入了FastJson，主要是因为调用高德地图接口时出现Gson解析异常
                         JSONObject jsonObject = JSON.parseObject(result);
                         //获取位置信息
                         JSONObject regeocode = jsonObject.getJSONObject("regeocode");

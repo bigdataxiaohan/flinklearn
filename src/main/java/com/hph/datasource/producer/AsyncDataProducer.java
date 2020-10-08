@@ -62,6 +62,7 @@ public class AsyncDataProducer {
             UserLocation userLocation = new UserLocation(user, timestamp, randomLonLat(true), randomLonLat(false), "");
             System.out.println(userLocation);
             producer.send(new ProducerRecord<String, String>("car_location", gson.toJson(userLocation)));
+            Thread.sleep(1000);
         }
     }
 

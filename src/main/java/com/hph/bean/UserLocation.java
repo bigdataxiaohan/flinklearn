@@ -7,7 +7,6 @@ public class UserLocation {
     private String lat;
     private String address;
 
-
     public String getAddress() {
         return address;
     }
