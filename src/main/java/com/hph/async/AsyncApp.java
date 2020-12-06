@@ -18,6 +18,7 @@ public class AsyncApp {
         //指定kafka的Broker地址
         props.setProperty("bootstrap.servers", "hadoop102:9092,hadoop103:9092,hadoop104:9092");
         //设置组ID
+
         props.setProperty("group.id", "flink");
         props.setProperty("auto.offset.reset", "earliest");
         //kafka自动提交偏移量，

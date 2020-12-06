@@ -4,7 +4,6 @@ package com.hph.sink;
 import com.google.gson.Gson;
 import com.hph.bean.OrderBean;
 import com.hph.utils.ClickHouseUtils;
-import com.hph.utils.MysqlUtils;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.sink.RichSinkFunction;
 

@@ -28,7 +28,7 @@ public class KafkaSource {
         //kafka自动提交偏移量，
         props.setProperty("enable.auto.commit","false");
 
-        FlinkKafkaConsumer<String> kafkaSouce = new FlinkKafkaConsumer<>("client_producer",
+        FlinkKafkaConsumer<String> kafkaSouce = new FlinkKafkaConsumer<>("avro_test",
                 new SimpleStringSchema(),
                 props);
         DataStreamSource<String> kafkaSource = environment.addSource(kafkaSouce);
