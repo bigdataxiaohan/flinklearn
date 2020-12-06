@@ -2,5 +2,6 @@
 target/
 .gitignore
 flink-blog-learn.iml
-pom.xml
 src/test/
+dependency-reduced-pom.xml
+src/main/resources/
